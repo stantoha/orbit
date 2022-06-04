@@ -2,49 +2,70 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: black;
+     background-color: black;
 }
-
-/* .wrapper{
-    transform: scale(0.5);
-} */
 
 .space{
     display: flex;
-    margin:0;
-   /*  justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items:center; */
     text-align: center;
-    align-self: center; */
-/*     width: 100vw;
-    height: 100vw; */
-    overflow: hidden;
+   
+    margin:0;
+    overflow: hidden; /* background:url("img/background/desktop.ini.jpg") no-repeat center left; */
 }
-
-
 
 .solar__system{
-    padding: 0;
     list-style: none;
     position: relative;
-    /* justify-content: center;
-    align-content:center;
-    align-items:center;
-    text-align: center; */
-    width: 50vw;
-    height: 50vw;
-    margin-left: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items:top;
+    text-align: center;
+    width: 100vw;
+    height: 100vw;
     margin: 0;
+    padding: 0;
+    padding-top: 10vh;
+   top: 0;
+    transform: scale(0.9);
 }
 
+.solar__system{
+    animation: solar__system 900s linear infinite forwards;
+}
+@keyframes solar__system{
+    0%{
+        /* transform: rotate(0); */
+        background:url("img/background/desktop.ini.jpg") no-repeat center left;
+    }
+    25%{
+        /* transform: rotate(180deg); */
+        background:url("img/background/desktop.ini.jpg") no-repeat top center;
+    }
+    50%{
+        /* transform: rotate(360deg); */
+        background:url("img/background/desktop.ini.jpg") no-repeat center right;
+    }
+    75%{
+        /* transform: rotate(540deg); */
+        background:url("img/background/desktop.ini.jpg") no-repeat bottom center;
+    }
+}
+
+
 .planet{
-    display: block;
-    box-shadow: inset 3px 1px 15px 5px rgba(255, 255, 255, 1);
-    border:5% solid white;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
     border-radius: 50%;    
     transform-origin: center;
 }
 
+.planet img{
+    border-radius: 50%;
+}
 
 .jupiter,
 .saturn,
@@ -54,64 +75,66 @@ body {
 .venus,
 .earth,
 .mars {
-    
     transform-origin: center;
     position: absolute;
-    border:5px solid white;
+    border:1px solid white;
     border-radius: 50%;
 }
 
 
 .mercury{
-    width: 10%;
-    height: 12%;
+    width: 17%;
+    height: 15%;
 }
 .venus{
-    width: 10%;
+    width: 23%;
     height: 15%;
 }
 .earth{
-    width: 20%;
+    width: 26%;
     height: 25%;
 }
 .mars{
-    width: 35%;
-    height: 32%;
+    width: 28%;
+    height: 33%;
 }
 .jupiter{
-    width: 55%;
-    height: 58%;
+    width: 58%;
+    height: 50%;
 }
 .saturn{
-    width: 60%;
-    height:72%;
+    width: 52%;
+    height:62%;
 }
 .uran{
-    width: 80%;
-    height: 75%;
+    width:75% ;
+    height:62% ;
 }
 .neptun{
-    width: 80%;
-    height: 90%;
+    width: 76%;
+    height: 88%;
+}
+
+.saturn img,
+.uran img{
+    transform: scale(2);
 }
 
 .sun{
-    /* width: 35vh;
-    height: 35vh; */
-   /*   top: 45%;
-    left: 45%; */
-   /*  transform-origin: center; */
     position: absolute;
-    box-shadow: inset 20px 1px 105px 25px orangered;
-    border:5% solid white;
+    box-shadow: /* inset */ 0 0 105px 25px rgba(255,69,0,0.5);
     border-radius: 50%;
-    background-color:yellow;
+    background-color:rgba(255,255,0,0.2);
 }
 
-/* .sun__rotate{
-    animation: mercury__rotate 80s linear infinite forwards;
+.sun .planet{
+    top: 60%;
+    left: 60%;
 }
-@keyframes mercury__rotate{
+.sun__rotate{
+    animation: sun__rotate 30s linear infinite forwards;
+}
+@keyframes sun__rotate{
     from{
         transform: rotate(0);
     }
@@ -119,12 +142,10 @@ body {
         transform: rotate(720deg);
     }
 }
- */
+
 
 .mercury .planet{
-   /*  width: 2vh;
-    height: 2vh;
-    */  top: 60%;
+    top: 60%;
     left: 60%;
 }
 .mercury__rotate{
@@ -140,10 +161,8 @@ body {
 }
 
 
-.venus .planet{
-   /*  width: 4vh;
-    height: 4vh;
-    */  top:40%;
+.venus .planet{ 
+    top:40%;
     left:40%;
 }
 .venus__rotate{
@@ -159,10 +178,8 @@ body {
 }
 
 
-.earth .planet{
-   /*  width: 4.5vh;
-    height: 4.5vh;
-    */  top: 35%;
+.earth .planet{  
+    top: 35%;
     left: 35%;
 }
 .earth__rotate{
@@ -178,10 +195,8 @@ body {
 }
 
 
-.mars .planet{
-   /*  width: 3vh;
-    height: 3vh;
-    */  top: 30%;
+.mars .planet{ 
+     top: 30%;
     left: 30%;
 }
 .mars__rotate{
@@ -198,9 +213,7 @@ body {
 
 
 .jupiter .planet{
-   /*  width: 16vh;
-    height: 16vh;
-    */  top: 25%;
+    top: 25%;
     left: 25%;
 }
 .jupiter__rotate{
@@ -216,10 +229,8 @@ body {
 }
 
 
-.saturn .planet{
-   /*  width: 14vh;
-    height: 14vh;
-    */  top:20%;
+.saturn .planet{ 
+    top:20%;
     left:20%;
 }
 .saturn__rotate{
@@ -235,10 +246,8 @@ body {
 }
 
 
-.uran .planet{
-   /*  width: 8vh;
-    height: 8vh;
-    */  top: 15%;
+.uran .planet{  
+    top: 15%;
     left: 15%;
 }
 .uran__rotate{
@@ -255,9 +264,7 @@ body {
 
 
 .neptun .planet{
-   /*  width: 9vh;
-    height: 9vh;
-    */  top: 8%;
+    top: 8%;
     left: 8%;
 }
 .neptun__rotate{
