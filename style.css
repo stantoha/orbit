@@ -10,46 +10,65 @@ body {
     /* justify-content: center;
     align-items:center; */
     text-align: center;
-   
+    /* background-color: black; */
     margin:0;
     overflow: hidden; /* background:url("img/background/desktop.ini.jpg") no-repeat center left; */
 }
 
 .solar__system{
+    /* background-color: black; */
+    transform-origin: center;
     list-style: none;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items:top;
+    align-items:center;
     text-align: center;
     width: 100vw;
-    height: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
     padding-top: 10vh;
    top: 0;
-    transform: scale(0.9);
+    transform: scale(0.5);
 }
 
-.solar__system{
-    animation: solar__system 900s linear infinite forwards;
+.solar__system__anim{
+    animation: solar__system__anim 900s linear infinite forwards;
 }
-@keyframes solar__system{
-    0%{
-        /* transform: rotate(0); */
-        background:url("img/background/desktop.ini.jpg") no-repeat center left;
+@keyframes solar__system__anim{
+    
+    0%{        justify-content: center;
+        filter: brightness(100%) contrast(100%);
+        transform:scale(1) translate(0,0);
+        background:url("img/background/desktop2.ini.jpg") no-repeat center left;
     }
+    
+ 
     25%{
-        /* transform: rotate(180deg); */
-        background:url("img/background/desktop.ini.jpg") no-repeat top center;
+        filter: brightness(200%) contrast(150%);
+        transform:scale(1.2) translate(10vw,15vh);
+        justify-content: flex-end;
+background:url("img/background/desktop2.ini.jpg") no-repeat top center;
+
     }
     50%{
-        /* transform: rotate(360deg); */
-        background:url("img/background/desktop.ini.jpg") no-repeat center right;
+       background:url("img/background/desktop2.ini.jpg") no-repeat center right;
+       justify-content: flex-start;
+        filter: brightness(50%) contrast(200%);
+        transform:scale(1) translate(-5vw,-10vh);
     }
+    
     75%{
-        /* transform: rotate(540deg); */
-        background:url("img/background/desktop.ini.jpg") no-repeat bottom center;
+        filter: brightness(200%) contrast(150%);
+        transform:scale(1.2) translate(10vw,15vh);        
+        justify-content: flex-end;
+        background:url("img/background/desktop2.ini.jpg") no-repeat bottom center;
+    }
+    100%{justify-content: center;
+        filter: brightness(100%) contrast(100%);
+        transform:scale(1) translate(0,0);
+        background:url("img/background/desktop2.ini.jpg") no-repeat center left;
     }
 }
 
@@ -77,79 +96,119 @@ body {
 .mars {
     transform-origin: center;
     position: absolute;
-    border:1px solid white;
+   /*  border:1px solid rgba(255,255,255,0.9); */
+  /*   box-shadow:inset 0 0 10vh 0 rgba(255,255,255,0.9); */
     border-radius: 50%;
 }
 
+/* .solar__system li:nth-child(odd):not(0){
+    border-left:15px solid rgba(255,255,255,0.7);
+    border-bottom:10px solid rgba(255,255,255,0.4);
+}
 
+.solar__system li:nth-child(even):not(0){
+    border-right:15px solid rgba(255,255,255,0.7);
+    border-top:5px solid rgba(255,255,255,0.5);
+}
+ */
 .mercury{
-    width: 17%;
-    height: 15%;
+    border:1px solid rgba(255,255,255,0.9);
+    width: 22%;
+    height: 24%;
 }
 .venus{
-    width: 23%;
-    height: 15%;
+    border:1px solid rgba(255,255,255,0.9);
+    width: 26%;
+    height: 35%;
 }
 .earth{
-    width: 26%;
-    height: 25%;
+    border:1px solid rgba(255,255,255,0.9);
+    width: 36%;
+    height: 35%;
 }
 .mars{
-    width: 28%;
-    height: 33%;
+    border:1px solid rgba(255,255,255,0.9);
+    width: 38%;
+    height: 43%;
 }
 .jupiter{
-    width: 58%;
-    height: 50%;
+    border:1px solid rgba(255,255,255,0.9);
+    width: 60%;
+    height: 60%;
 }
 .saturn{
-    width: 52%;
-    height:62%;
+    border:1px solid rgba(255,255,255,0.9);
+    width: 68%;
+    height:68%;
 }
 .uran{
+    border:1px solid rgba(255,255,255,0.9);
     width:75% ;
-    height:62% ;
+    height:75%  ;
 }
 .neptun{
-    width: 76%;
-    height: 88%;
+    border:1px solid rgba(255,255,255,0.9);
+    width: 98%;
+    height: 98%;
 }
 
-.saturn img,
+/* .saturn img,
 .uran img{
     transform: scale(2);
-}
+    transform-origin: center;
+} */
 
 .sun{
     position: absolute;
-    box-shadow: /* inset */ 0 0 105px 25px rgba(255,69,0,0.5);
+    box-shadow: /* inset */ 0 0 100px 50px rgba(255,69,0,1),
+    /*  */inset 0 0 300px 50px rgba(0,0,0,1),
+    inset 0 0 200px 50px rgba(255,255,0,0.7);
     border-radius: 50%;
-    background-color:rgba(255,255,0,0.2);
+    background-color:rgba(255,255,0,0.7);
+    /* border:1px solid rgba(255,255,0,0.5); */
 }
 
 .sun .planet{
+    box-shadow: inset 0 0 200px 25px rgba(255,69,0,1);
     top: 60%;
     left: 60%;
 }
 .sun__rotate{
-    animation: sun__rotate 30s linear infinite forwards;
+    animation: sun__rotate 90s linear infinite forwards;
 }
 @keyframes sun__rotate{
-    from{
-        transform: rotate(0);
+    0%{
+       /*  filter: brightness(100%) contrast(100%); */
+        transform:scale(1) rotate(0);
     }
-    to{
-        transform: rotate(720deg);
+    25%{
+       /*  filter: brightness(150%) contrast(150%); */
+        transform:scale(1.2) rotate(180deg);
+
+    }
+    50%{
+       /*  filter: brightness(100%) contrast(200%); */
+        transform:scale(1.1) rotate(360deg);
+    }
+    75%{
+       /*  filter: brightness(150%) contrast(150%); */
+        transform:scale(1.2) rotate(540deg);
+        
+    }
+    100%{
+       /*  filter: brightness(100%) contrast(100%); */
+        transform:scale(1) rotate(720deg);
+        
     }
 }
 
 
 .mercury .planet{
-    top: 60%;
-    left: 60%;
+    top: 60vh;
+    left: 60vh;
 }
 .mercury__rotate{
-    animation: mercury__rotate 30s linear infinite forwards;
+    animation: mercury__rotate 10s linear infinite forwards;
 }
 @keyframes mercury__rotate{
     from{
@@ -162,11 +221,11 @@ body {
 
 
 .venus .planet{ 
-    top:40%;
-    left:40%;
+    top:40vh;
+    left:40vh;
 }
 .venus__rotate{
-    animation: venus__rotate 45s linear infinite forwards;
+    animation: venus__rotate 17s linear infinite forwards;
 }
 @keyframes venus__rotate{
     from{
@@ -179,11 +238,11 @@ body {
 
 
 .earth .planet{  
-    top: 35%;
-    left: 35%;
+    top: 35vh;
+    left: 35vh;
 }
 .earth__rotate{
-    animation: earth__rotate 18s linear infinite forwards;
+    animation: earth__rotate 21s linear infinite forwards;
 }
 @keyframes earth__rotate{
     from{
@@ -194,13 +253,17 @@ body {
     }
 }
 
+.planet__shadow{
+    border-radius:50vh;    
+    /* box-shadow:0 0 20px rgba(255,255,255,0.9); */
+}
 
 .mars .planet{ 
-     top: 30%;
-    left: 30%;
+     top: 32vh;
+    left: 32vh;
 }
 .mars__rotate{
-    animation: mars__rotate 25s linear infinite forwards;
+    animation: mars__rotate 28s linear infinite forwards;
 }
 @keyframes mars__rotate{
     from{
@@ -213,11 +276,11 @@ body {
 
 
 .jupiter .planet{
-    top: 25%;
-    left: 25%;
+    top: 22vh;
+    left: 22vh;
 }
 .jupiter__rotate{
-    animation: jupiter__rotate 70s linear infinite forwards;
+    animation: jupiter__rotate 50s linear infinite forwards;
 }
 @keyframes jupiter__rotate{
     from{
@@ -230,11 +293,11 @@ body {
 
 
 .saturn .planet{ 
-    top:20%;
-    left:20%;
+    top:18vh;
+    left:18vh;
 }
 .saturn__rotate{
-    animation: saturn__rotate 110s linear infinite forwards;
+    animation: saturn__rotate 70s linear infinite forwards;
 }
 @keyframes saturn__rotate{
     from{
@@ -247,11 +310,11 @@ body {
 
 
 .uran .planet{  
-    top: 15%;
-    left: 15%;
+    top: 5vh;
+    left: 5vh;
 }
 .uran__rotate{
-    animation: uran__rotate 140s linear infinite forwards;
+    animation: uran__rotate 80s linear infinite forwards;
 }
 @keyframes uran__rotate{
     from{
@@ -264,8 +327,8 @@ body {
 
 
 .neptun .planet{
-    top: 8%;
-    left: 8%;
+    top: -30vh;
+    left: -30vh;
 }
 .neptun__rotate{
     animation: neptun__rotate 70s linear infinite forwards;
@@ -283,6 +346,29 @@ body {
 
 
 
+.solar__system h4{
+    color: white;
+    text-transform: uppercase;
+    background-color:transparent;
+    margin: 0;
+    padding: 0;
+}
+
+.sun h4{
+    position: absolute;
+    color: black;
+
+}
+
+
+.replace__left{
+    transform-origin:left ;
+}
+
+.replace__right{
+    transform-origin:right ;
+}
+/* 
 
 
 
@@ -296,5 +382,654 @@ body {
 
 
 
+.object-item{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.solarSystem,
+.object-link{
+    width: 10em;
+    color: white;
+}
+
+a:hover.object-link,
+a:hover.solarSystem{
+    color: grey;
+}
 
 
+
+
+.planet{
+    position: absolute;
+    overflow: hidden;
+
+}
+
+.realsun,
+.sun,
+.hotsun, 
+.sunn,
+.mercury,
+.venus,
+.earth,
+.mars,
+.jupiter,
+.saturn,
+.uran,
+.neptun{
+    border-radius: 50%;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    }
+
+.realsun,
+.sun {  
+     
+    top:23vh ;
+    left: 35vw;
+    width: 28.5vw;
+    height: 28.5vw;
+    animation-name: sun  ;
+    animation-duration: 270s;
+    
+    
+}
+
+@keyframes sun{
+    0%{
+        transform: rotate(0deg) ;
+    }
+    50%{
+        transform: rotate(720deg) scale(0.5) ;
+    }
+    100%{
+        transform: rotate(1440deg) ;
+    }
+
+}
+
+.hotsun{
+    animation-name: hotsun  ;
+    animation-duration: 80s;
+    
+}
+
+@keyframes hotsun{
+    0%{
+        transform: rotate(0deg);
+    filter: brightness(90%) saturate(110%) contrast(100%);
+    }
+    25%{
+        transform: rotate(-120deg) scale(1.2);
+        filter: brightness(100%) saturate(100%) contrast(110%);
+        opacity: 0.8;
+    }
+    50%{
+        transform: rotate(-240deg) scale(1.15);
+
+        filter: brightness(200%) saturate(110%) contrast(120%);
+        opacity: 0.7;
+    }
+    75%{
+        transform: rotate(-360deg) scale(1.2);
+        filter: brightness(100%) saturate(100%) contrast(110%);
+        opacity: 0.8;
+    }
+    100%{
+        filter: brightness(90%) saturate(110%) contrast(100%);
+    }
+}
+
+.sunn{
+    opacity: 0.5;
+    filter: saturate(120%) brightness(90%) contrast(120%);
+    animation-name: sunn  ;
+    animation-duration: 150s;
+    
+}
+
+@keyframes sunn{
+    0%{
+        transform:  rotate(120deg);
+    filter: brightness(90%) saturate(110%) contrast(100%);
+    }
+    25%{
+        transform:  rotate(240deg);
+
+        filter: brightness(200%) saturate(100%) contrast(110%);
+        opacity: 0.6;
+    }
+    50%{
+        
+        transform:  rotate(360deg) scale(1.1);
+
+        filter: brightness(110%) saturate(110%) contrast(120%);
+        opacity: 0.4;
+    }
+    75%{
+        transform:  rotate(480deg);
+
+        filter: brightness(100%) saturate(100%) contrast(110%);
+        opacity: 0.6;
+    }
+    100%{
+        transform:  rotate(540deg);
+
+        filter: brightness(90%) saturate(110%) contrast(100%);
+    }
+}
+
+.mercury {
+    border-radius:50%;
+    top:30vh ;
+    left: 45vw;
+    width: 0.1vw;
+    height: 0.1vw;
+    animation-name: mercury  ;
+    animation-duration: 15s;
+    
+}
+
+@keyframes mercury{
+    0%{
+        transform: rotate(0deg) ;
+        opacity: 0.7;
+    }
+    11%{
+        transform: translate(-10vw,10vh) rotate(-180deg);
+        opacity: 1;
+    }
+    22%{
+        transform:translate(-20vw,20vh)  rotate(-180deg) ;
+    }
+    33%{
+        transform: translate(-25vw,35vh) scale(1.5) rotate(-180deg);
+    }
+    44%{
+        transform:translate(-10vw,40vh) scale(2)  rotate(-180deg) ;
+    }
+    55%{
+        transform:translate(5vw,40vh) scale(2)  rotate(-180deg) ;
+    }
+    65%{
+        transform:translate(20vw,30vh) scale(2.3)  rotate(-180deg) ;
+        opacity: 1;
+    }
+    75%{
+        transform:translate(35vw,20vh) scale(1.5)  rotate(-180deg) ;
+        opacity: 0.8;
+    }
+    85%{
+        transform:translate(18vw,10vh) scale(1)  rotate(-180deg) ;
+        opacity: 0.3;
+    }
+    100%{
+        transform: rotate(-180deg) ;
+        opacity: 0.6;
+    }
+}
+
+.venus {
+    
+    top:25vh ;
+    left: 40vw;
+    width: 0.248vw;
+    height: 0.248vw;
+    animation-name:venus ;
+    animation-duration: 25s;
+    
+}
+
+@keyframes venus{
+    0%{
+        transform: rotate(0deg) ;
+        opacity: 0.7;
+    }
+    11%{
+        transform: translate(-15vw,8vh) rotate(-180deg);
+        opacity: 1;
+    }
+    22%{
+        transform:translate(-30vw,16vh)  rotate(-180deg) ;
+    }
+    33%{
+        transform: translate(-15vw,23vh) scale(1.5) rotate(-180deg);
+    }
+    44%{
+        transform:translate(0vw,26vh) scale(2)  rotate(-180deg) ;
+    }
+    
+    60%{
+        transform:translate(20vw,23vh) scale(2.3)  rotate(-180deg) ;
+        opacity: 1;
+    }
+    73%{
+        transform:translate(40vw,20vh) scale(1.5)  rotate(-180deg) ;
+        opacity: 0.8;
+    }
+    85%{
+        transform:translate(25vw,15vh) scale(1)  rotate(-180deg) ;
+        opacity: 0.3;
+    }
+    100%{
+        transform: rotate(-180deg) ;
+        opacity: 0.6;
+    }
+}
+
+.earth {
+    
+    top:35vh ;
+    left: 40vw;
+    width: 0.261vw;
+    height: 0.261vw;
+    animation-name:earth  ;
+    animation-duration: 45s;
+    
+}
+
+@keyframes earth{
+    0%{
+        transform: rotate(0deg) ;
+        opacity: 0.7;
+    }
+    11%{
+        transform: translate(-15vw,8vh) rotate(-180deg);
+        opacity: 1;
+    }
+    22%{
+        transform:translate(-30vw,16vh)  rotate(-180deg) ;
+    }
+    33%{
+        transform: translate(-15vw,23vh) scale(1.5) rotate(-180deg);
+    }
+    44%{
+        transform:translate(0vw,26vh) scale(2)  rotate(-180deg) ;
+    }
+    
+    60%{
+        transform:translate(20vw,23vh) scale(2.3)  rotate(-180deg) ;
+        opacity: 1;
+    }
+    73%{
+        transform:translate(40vw,20vh) scale(1.5)  rotate(-180deg) ;
+        opacity: 0.8;
+    }
+    85%{
+        transform:translate(25vw,15vh) scale(1)  rotate(-180deg) ;
+        opacity: 0.3;
+    }
+    100%{
+        transform: rotate(-180deg) ;
+        opacity: 0.6;
+    }
+}
+
+.mars{
+    
+    top:28vh ;
+    left: 50vw;
+    width: 0.1vw;
+    height: 0.1vw;
+    animation-name:mars ;
+    animation-duration: 25s;
+    
+}
+
+@keyframes mars{
+    0%{
+        transform: rotate(0deg) ;
+        opacity: 0.7;
+    }
+    11%{
+        transform: translate(-10vw,10vh) rotate(-180deg);
+        opacity: 1;
+    }
+    22%{
+        transform:translate(-20vw,20vh)  rotate(-180deg) ;
+    }
+    33%{
+        transform: translate(-25vw,35vh) scale(1.5) rotate(-180deg);
+    }
+    44%{
+        transform:translate(-10vw,40vh) scale(2)  rotate(-180deg) ;
+    }
+    55%{
+        transform:translate(5vw,40vh) scale(2)  rotate(-180deg) ;
+    }
+    65%{
+        transform:translate(20vw,30vh) scale(2.3)  rotate(-180deg) ;
+        opacity: 1;
+    }
+    75%{
+        transform:translate(35vw,20vh) scale(1.5)  rotate(-180deg) ;
+        opacity: 0.8;
+    }
+    85%{
+        transform:translate(18vw,10vh) scale(1)  rotate(-180deg) ;
+        opacity: 0.3;
+    }
+    100%{
+        transform: rotate(-180deg) ;
+        opacity: 0.6;
+    }
+}
+
+.jupiter{
+    
+    top:40vh ;
+    left: 85vw;
+    width: 2.865vw;
+    height: 2.865vw;
+    animation-name:jupiter ;
+    animation-duration:120s;
+    
+}
+
+@keyframes jupiter{
+    0%{
+        transform: translate() rotate(45deg);
+        opacity: 1;
+    }
+    10%{
+        transform: translate(-20vw,15vh) scale(0.9) rotate(90deg);
+        opacity: 0.3;
+    }
+    20%{
+        transform: translate(-40vw,20vh) scale(0.8) rotate(135deg);
+        opacity: 0;
+    }
+    30%{
+        transform: translate(-60vw,25vh) scale(0.9) rotate(180deg);
+       opacity: 0.5;
+    }
+    40%{
+       transform: translate(-80vw,20vh) scale(1) rotate(225deg);
+       opacity: 1;
+}
+    50%{
+        transform: translate(-100vw,15vh) rotate(270deg);
+
+    }
+    60%{
+        transform: translate(-80vw,5vh) rotate(315deg);
+
+    }
+    70%{
+        transform: translate(-60vw,-8vh) rotate(360deg);
+
+    }
+    80%{
+        transform: translate(-40vw,-12vh) rotate(405deg);
+
+    }
+    90%{
+        transform: translate(-20vw,-10vh) rotate(450deg);
+
+    }
+    
+    100%{
+        transform: rotate(495deg);
+
+    }
+
+}
+
+.saturn{
+    
+    top:5vh ;
+    left: 50vw;
+    width: 7.17vw;
+    height: 7.17vw;
+    animation-name:saturn ;
+    animation-duration:400s;
+    
+}
+
+@keyframes saturn{
+    0%{
+        transform: rotate(-60deg);
+        opacity: 1;
+    }
+    11%{
+        transform: translate(20vw,10vh) rotate(-120deg);
+        opacity: 1;
+    }
+    22%{
+        transform:translate(30vw,20vh)  rotate(-180deg) ;
+        opacity: 1;
+
+    }
+    33%{
+        transform: translate(40vw,35vh)  rotate(-240deg);
+        opacity: 1;
+
+    }
+    44%{
+        transform:translate(20vw,40vh) scale(0.9)  rotate(-300deg) ;
+        opacity: 0.5;
+    }
+    50%{
+        transform:translate(10vw,42vh) scale(0.85) rotate(-330deg);
+        opacity: 0.1;
+    }
+    
+    55%{
+        transform:translate(0vw,40vh) scale(0.8)  rotate(-360deg) ;
+        opacity: 0;
+    }
+    65%{
+        transform:translate(-30vw,30vh) scale(0.9)  rotate(-420deg) ;
+        opacity: 0.3;
+
+
+    }
+    75%{
+        transform:translate(-45vw,20vh) scale(0.8)    rotate(-480deg) ;
+      opacity: 1;
+    }
+    85%{
+        transform:translate(-28vw,10vh)  rotate(-540deg) ;
+        
+    }
+    100%{
+    
+        transform: rotate(-600deg);
+
+    }
+}
+
+.uran {
+    border-radius:50%;
+    top:10vh ;
+    left: 35vw;
+    width: 3.12vw;
+    height: 3.12vw;
+    animation-name:uran ;
+    animation-duration: 205s;
+    
+}
+
+@keyframes uran{
+    0%{
+        transform: rotate(0deg) ;
+       
+    }
+    11%{
+        transform: translate(-15vw,8vh) rotate(-180deg);
+        opacity: 1;
+    }
+    22%{
+        transform:translate(-30vw,16vh)  rotate(-360deg) ;
+    }
+    33%{
+        transform: translate(-15vw,23vh) scale(1.1) rotate(-540deg);
+    }
+    44%{
+        transform:translate(0vw,26vh) scale(1.2)  rotate(-720deg) ;
+    }
+    
+    60%{
+        transform:translate(20vw,23vh) scale(1.2)  rotate(-920deg) ;
+        opacity: 1;
+    }
+    73%{
+        transform:translate(40vw,16vh) scale(1)  rotate(-1140deg) ;
+        opacity: 0.7;
+    }
+    83%{
+        transform:translate(25vw,8vh)   rotate(-1320deg) ;
+        opacity: 0;
+    }
+    100%{
+        transform: rotate(-1500deg) ;
+        opacity: 0.5;
+    }
+}
+
+.neptun {
+    border-radius:50%;
+    left: 10vw;
+    top:60vh ;
+    width: 1.01vw;
+    height: 1.01vw;
+    animation-name:neptun ;
+    animation-duration: 750s;
+    
+}   
+
+@keyframes neptun{
+    0%{
+        transform: rotate(0deg) ;
+    }
+    10%{
+        transform: translate(10vw,-15vh) rotate(30deg);
+    }
+    20%{
+        transform:translate(25vw,-35vh) rotate(60deg) ;
+    }
+    30%{
+        transform: translate(40vw,-50vh) scale(1.2) rotate(90deg);
+    }
+    40%{
+        transform:translate(60vw,-60vh) scale(1.2) rotate(120deg);
+    }
+    50%{
+        transform:translate(85vw,-70vh) scale(1.2)  rotate(150deg) ;
+           }
+    60%{
+        transform:translate(65vw,-40vh) scale(1.2) rotate(180deg) ;
+        opacity: 1;
+    }
+    70%{
+        transform:translate(45vw,-5vh) scale(1)  rotate(210deg) ;
+        opacity: 0;
+    }
+    80%{
+        transform:translate(25vw,15vh) scale(1) rotate(240deg);
+        
+    }
+    90%{
+        transform:translate(10vw,10vh) scale(1)  rotate(270deg) ;
+        
+    }
+    100%{
+        transform:translate(-5vw,5vh) rotate(360deg);
+      
+    }
+}
+
+
+.tabcontainer {
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, .25)
+}
+
+.tabcontent {
+    position: relative;
+}
+
+
+
+.tabcontent__descr {
+    position: absolute;
+    top: 300px;
+    right: -177px;
+    width: 550px;
+    height: 359px;
+    background: rgba(251, 254, 93, .8);
+    padding: 50px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+    color: rgba(0, 0, 0, .7)
+}
+
+.tabheader {
+ 
+    padding: 35px 30px;
+    background-color: #fff
+}
+
+.tabheader h3 {
+    font-weight: 700;
+    font-size: 16px
+}
+
+.tabheader__items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 35px;
+    padding-left: 26px;
+    border-left: 1px solid #000
+}
+
+.tabheader__item {
+    font-weight: 700;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+    transition: .3s all
+}
+
+.tabheader__item_active {
+    color: #000;
+    font-size: 22px;
+    font-weight: 700
+}
+
+
+.block__btn__active{
+    color:red;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+ */
