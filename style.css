@@ -41,7 +41,7 @@ body {
     0%{        justify-content: center;
         filter: brightness(100%) contrast(100%);
         transform:scale(1) translate(0,0);
-        background:url("img/background/desktop2.ini.jpg") no-repeat center left;
+        background:url("img/background/desktop.ini.jpg") no-repeat center left;
     }
     
  
@@ -49,11 +49,11 @@ body {
         filter: brightness(200%) contrast(150%);
         transform:scale(1.2) translate(10vw,15vh);
         justify-content: flex-end;
-background:url("img/background/desktop2.ini.jpg") no-repeat top center;
+background:url("img/background/desktop.ini.jpg") no-repeat top center;
 
     }
     50%{
-       background:url("img/background/desktop2.ini.jpg") no-repeat center right;
+       background:url("img/background/desktop.ini.jpg") no-repeat center right;
        justify-content: flex-start;
         filter: brightness(50%) contrast(200%);
         transform:scale(1) translate(-5vw,-10vh);
@@ -63,12 +63,12 @@ background:url("img/background/desktop2.ini.jpg") no-repeat top center;
         filter: brightness(200%) contrast(150%);
         transform:scale(1.2) translate(10vw,15vh);        
         justify-content: flex-end;
-        background:url("img/background/desktop2.ini.jpg") no-repeat bottom center;
+        background:url("img/background/desktop.ini.jpg") no-repeat bottom center;
     }
     100%{justify-content: center;
         filter: brightness(100%) contrast(100%);
         transform:scale(1) translate(0,0);
-        background:url("img/background/desktop2.ini.jpg") no-repeat center left;
+        background:url("img/background/desktop.ini.jpg") no-repeat center left;
     }
 }
 
