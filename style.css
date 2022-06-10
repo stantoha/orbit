@@ -34,14 +34,14 @@ body {
 }
 
 .solar__system__anim{
-    animation: solar__system__anim 900s linear infinite forwards;
+    animation: solar__system__anim 600s linear infinite forwards;
 }
 @keyframes solar__system__anim{
     
     0%{        justify-content: center;
         filter: brightness(100%) contrast(100%);
         transform:scale(1) translate(0,0);
-        background:url("img/background/desktop.ini.jpg") no-repeat center left;
+        background:url("img/background/universe1.jpg") no-repeat top right;
     }
     
  
@@ -49,11 +49,11 @@ body {
         filter: brightness(200%) contrast(150%);
         transform:scale(1.2) translate(10vw,15vh);
         justify-content: flex-end;
-background:url("img/background/desktop.ini.jpg") no-repeat top center;
+background:url("img/background/universe1.jpg") no-repeat bottom left;
 
     }
     50%{
-       background:url("img/background/desktop.ini.jpg") no-repeat center right;
+       background:url("img/background/universe1.jpg") no-repeat top left;
        justify-content: flex-start;
         filter: brightness(50%) contrast(200%);
         transform:scale(1) translate(-5vw,-10vh);
@@ -63,12 +63,12 @@ background:url("img/background/desktop.ini.jpg") no-repeat top center;
         filter: brightness(200%) contrast(150%);
         transform:scale(1.2) translate(10vw,15vh);        
         justify-content: flex-end;
-        background:url("img/background/desktop.ini.jpg") no-repeat bottom center;
+        background:url("img/background/universe1.jpg") no-repeat bottom right;
     }
     100%{justify-content: center;
         filter: brightness(100%) contrast(100%);
         transform:scale(1) translate(0,0);
-        background:url("img/background/desktop.ini.jpg") no-repeat center left;
+        background:url("img/background/universe1.jpg") no-repeat top right;
     }
 }
 
